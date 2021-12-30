@@ -11,14 +11,20 @@ export interface AlertProps {
    * Alert display mode
    */
   mode?: 'danger' | 'dark' | 'default' | 'primary' | 'success'
+  shape?: 'pill' | 'rounded' | 'soft' | 'square'
 }
 
 export default function Alert({
   label,
-  mode = 'default'
+  mode = 'default',
+  shape = 'soft',
+  ...props
 }: AlertProps) {
   return (
-    <div className={ `Alert Alert--${mode}` }>
+    <div
+      className={ `Alert Alert--${mode} Alert--${shape}` }
+      {...props}
+    >
       { label }
     </div>
   )

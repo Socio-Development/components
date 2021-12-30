@@ -1,12 +1,11 @@
 .Alert {
   border: 1px solid transparent;
-  border-radius: .25rem;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 1rem 1.6rem;
   position: relative;
 }
 
-/* Modes */
+/* Mode */
 .Alert--danger {
   background-color: var(--red-100);
   border-color: var(--red-200);
@@ -35,4 +34,20 @@
   background-color: var(--green-100);
   border-color: var(--green-200);
   color: var(--green-700);
+}
+
+/* Shape */
+.Alert--pill {
+  border-radius: 5rem;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.Alert--rounded {
+  border-radius: .75rem;
+}
+.Alert--soft {
+  border-radius: .25rem;
+}
+.Alert--square {
+  border-radius: 0;
 }
