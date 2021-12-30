@@ -1,0 +1,4 @@
+:root {
+  --danger: var(--red-500);
+  --light: var(--gray-100);
+}
