@@ -1,0 +1,5 @@
+.Alert {
+  border: 1px solid slategray;
+  display: block;
+  padding: 1rem;
+}
