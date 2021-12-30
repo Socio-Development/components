@@ -3,14 +3,22 @@ import React from 'react'
 import './Alert.css'
 
 export interface AlertProps {
+  /**
+   * Alert contents
+   */
   label: string
+  /**
+   * Alert display mode
+   */
+  mode?: 'danger' | 'dark' | 'default' | 'primary' | 'success'
 }
 
 export default function Alert({
-  label
+  label,
+  mode = 'default'
 }: AlertProps) {
   return (
-    <div className="Alert">
+    <div className={ `Alert Alert--${mode}` }>
       { label }
     </div>
   )
