@@ -11,6 +11,10 @@ export interface AlertProps {
    * Alert display mode
    */
   mode?: 'danger' | 'dark' | 'default' | 'primary' | 'success'
+  /**
+   * Alert corner shape
+   * (shape="pill" will only display text on a single line)
+   */
   shape?: 'pill' | 'rounded' | 'soft' | 'square'
 }
 
