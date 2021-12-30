@@ -2,8 +2,11 @@
   "name": "@socio-development/components",
   "version": "0.0.1",
   "description": "The Socio component library",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sb": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
