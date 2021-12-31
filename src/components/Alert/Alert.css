@@ -32,20 +32,20 @@
 
 /* Exit animation */
 .Alert--exit {
+  opacity: 0;
   transition: 1s;
 }
 .Alert--exit .Alert--close {
   visibility: hidden;
 }
 
-.Alert--exit-fade {
-  opacity: 0;
+.Alert--exit-left {
+  margin-left: -10rem;
+  margin-right: 10rem;
 }
-
 .Alert--exit-right {
   margin-left: 10rem;
   margin-right: -10rem;
-  opacity: 0;
 }
 
 /* Mode */

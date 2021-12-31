@@ -10,7 +10,7 @@ export interface AlertProps {
   /**
    * What exit animation to play?
    */
-  exitAnimation?: 'fade' | 'right'
+  exitAnimation?: 'fade' | 'left' | 'right'
   /**
    * Alert contents
    */
