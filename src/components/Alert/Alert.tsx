@@ -8,6 +8,10 @@ export interface AlertProps {
    */
   dismissable?: boolean
   /**
+   * What exit animation to play?
+   */
+  exitAnimation?: 'fade' | 'right'
+  /**
    * Alert contents
    */
   label: string
@@ -24,40 +28,43 @@ export interface AlertProps {
 
 export default function Alert({
   dismissable,
+  exitAnimation = 'fade',
   label,
   mode = 'default',
   shape = 'soft',
   ...props
 }: AlertProps) {
-  const [isDisplayed, setIsDisplayed] = useState('flex')
+  const [isActive, setIsActive] = useState(true)
+  const [isHidden, setIsHidden] = useState(false)
 
-  const handleOnClick = () => {
-    setIsDisplayed('none')
+  const closeAlert = () => {
+    setIsHidden(true)
+    setTimeout(() => setIsActive(false), 800)
   }
-
   const closeButton = (
     <button
       className="Alert--close"
       type="button"
       aria-label="Close"
       title="Close"
-      onClick={ handleOnClick }
+      onClick={ closeAlert }
     />
   )
 
-  return (
+  if (isActive) return (
     <div
       className={[
         'Alert',
         `Alert--${mode}`,
         `Alert--${shape}`,
-        dismissable && 'Alert--dismissable'
+        dismissable && 'Alert--dismissable',
+        isHidden && `Alert--exit Alert--exit-${exitAnimation}`
       ].join(' ')}
-      style={{ display: isDisplayed }}
       {...props}
     >
       <span className="Alert--text">{ label }</span>
       { dismissable && closeButton }
     </div>
   )
+  return <div />
 }

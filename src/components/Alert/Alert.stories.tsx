@@ -14,7 +14,8 @@ Default.args = {
   label: 'This is an alert',
   mode: 'default',
   shape: 'soft',
-  dismissable: false
+  dismissable: false,
+  exitAnimation: 'fade'
 }
 
 export const Modes: Story<AlertProps> = args => (<>

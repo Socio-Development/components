@@ -8,3 +8,7 @@
 button:not(:disabled) {
   cursor: pointer;
 }
+
+body {
+  overflow-x: hidden;
+}
