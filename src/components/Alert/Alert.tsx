@@ -27,6 +27,9 @@ export interface AlertProps {
   shape?: Shape
 }
 
+/**
+ * Primary UI component for user notification
+ */
 export default function Alert({
   dismissable,
   exitAnimation = 'fade',

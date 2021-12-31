@@ -16,3 +16,42 @@ Default.args = {
   shape: 'soft',
   size: 'medium'
 }
+
+export const Modes: Story<ButtonProps> = args => (
+  <div
+    style={{
+      alignItems: 'start',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1rem'
+    }}
+  >
+    <Button {...args} mode="default" />
+    <Button {...args} mode="primary" />
+    <Button {...args} mode="success" />
+    <Button {...args} mode="danger" />
+    <Button {...args} mode="dark" />
+  </div>
+)
+Modes.args = {
+  ...Default.args
+}
+
+export const Shapes: Story<ButtonProps> = args => (
+  <div
+    style={{
+      alignItems: 'start',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1rem'
+    }}
+  >
+    <Button {...args} shape="pill" />
+    <Button {...args} shape="rounded" />
+    <Button {...args} shape="soft" />
+    <Button {...args} shape="square" />
+  </div>
+)
+Shapes.args = {
+  ...Default.args
+}
