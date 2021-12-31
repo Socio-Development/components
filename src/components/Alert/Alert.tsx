@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 // CSS
 import './Alert.css'
 
 export interface AlertProps {
+  /**
+   * Is the alert dismissable?
+   */
+  dismissable?: boolean
   /**
    * Alert contents
    */
@@ -19,17 +23,41 @@ export interface AlertProps {
 }
 
 export default function Alert({
+  dismissable,
   label,
   mode = 'default',
   shape = 'soft',
   ...props
 }: AlertProps) {
+  const [isDisplayed, setIsDisplayed] = useState('flex')
+
+  const handleOnClick = () => {
+    setIsDisplayed('none')
+  }
+
+  const closeButton = (
+    <button
+      className="Alert--close"
+      type="button"
+      aria-label="Close"
+      title="Close"
+      onClick={ handleOnClick }
+    />
+  )
+
   return (
     <div
-      className={ `Alert Alert--${mode} Alert--${shape}` }
+      className={[
+        'Alert',
+        `Alert--${mode}`,
+        `Alert--${shape}`,
+        dismissable && 'Alert--dismissable'
+      ].join(' ')}
+      style={{ display: isDisplayed }}
       {...props}
     >
-      { label }
+      <span className="Alert--text">{ label }</span>
+      { dismissable && closeButton }
     </div>
   )
 }

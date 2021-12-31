@@ -13,7 +13,8 @@ export const Default = Template.bind({})
 Default.args = {
   label: 'This is an alert',
   mode: 'default',
-  shape: 'soft'
+  shape: 'soft',
+  dismissable: false
 }
 
 export const Modes: Story<AlertProps> = args => (<>
@@ -35,4 +36,10 @@ export const Shapes: Story<AlertProps> = args => (<>
 </>)
 Shapes.args = {
   ...Default.args
+}
+
+export const Dismissable = Template.bind({})
+Dismissable.args = {
+  ...Default.args,
+  dismissable: true
 }
