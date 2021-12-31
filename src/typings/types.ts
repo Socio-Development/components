@@ -4,3 +4,9 @@ export type Mode =
   | 'default'
   | 'primary'
   | 'success'
+
+export type Shape =
+  | 'pill'
+  | 'rounded'
+  | 'soft'
+  | 'square'
