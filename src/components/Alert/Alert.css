@@ -84,7 +84,7 @@
 
 /* Shape */
 .Alert--pill {
-  border-radius: 5rem;
+  border-radius: var(--shape-pill);
 }
 .Alert--pill .Alert--text {
   overflow-x: scroll;
@@ -93,13 +93,13 @@
 }
 
 .Alert--rounded {
-  border-radius: .75rem;
+  border-radius: var(--shape-rounded);
 }
 
 .Alert--soft {
-  border-radius: .25rem;
+  border-radius: var(--shape-soft);
 }
 
 .Alert--square {
-  border-radius: 0;
+  border-radius: var(--shape-square);
 }

@@ -1,4 +1,6 @@
 :root {
-  --danger: var(--red-500);
-  --light: var(--gray-100);
+  --shape-pill: 10rem;
+  --shape-rounded: .75rem;
+  --shape-soft: .25rem;
+  --shape-square: 0;
 }
