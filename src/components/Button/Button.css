@@ -6,41 +6,32 @@
 }
 
 /* Outline */
-.Button[class*="-outline"] {
-  background-color: transparent;
-}
+.Button[class*="-outline"] { background-color: transparent; }
 
 .Button--danger-outline { color: var(--red-500); }
 .Button--dark-outline { color: var(--gray-900); }
-/* .Button--default-outline { color: var(--gray-300); } */
 .Button--primary-outline { color: var(--primary-500); }
 .Button--success-outline { color: var(--green-500); }
 
-/* Mode */
-.Button[class*="danger"] {
-  border-color: var(--red-500);
-}
+/* Mode Danger */
+.Button[class*="danger"] { border-color: var(--red-500); }
 .Button--danger,
 .Button--danger-outline:hover {
   background-color: var(--red-500);
   color: var(--white);
 }
-.Button--danger:hover {
-  background-color: var(--red-400);
-}
+.Button--danger:hover { background-color: var(--red-400); }
 
-.Button[class*="dark"] {
-  border-color: var(--gray-900);
-}
+/* Mode Dark */
+.Button[class*="dark"] { border-color: var(--gray-900); }
 .Button--dark,
 .Button--dark-outline:hover {
   background-color: var(--gray-900);
   color: var(--white);
 }
-.Button--dark:hover {
-  background-color: var(--gray-800);
-}
+.Button--dark:hover { background-color: var(--gray-800); }
 
+/* Mode Default */
 .Button[class*="default"] {
   border-color: var(--gray-300);
   color: var(--gray-900);
@@ -49,33 +40,25 @@
 .Button--default-outline:hover {
   background-color: var(--gray-300);
 }
-.Button--default:hover {
-  background-color: var(--gray-400);
-}
+.Button--default:hover { background-color: var(--gray-400); }
 
-.Button[class*="primary"] {
-  border-color: var(--primary-500);
-}
+/* Mode Primary */
+.Button[class*="primary"] { border-color: var(--primary-500); }
 .Button--primary,
 .Button--primary-outline:hover {
   background-color: var(--primary-500);
   color: var(--white);
 }
-.Button--primary:hover {
-  background-color: var(--primary-400);
-}
+.Button--primary:hover { background-color: var(--primary-400); }
 
-.Button[class*="success"] {
-  border-color: var(--green-500);
-}
+/* Mode Success */
+.Button[class*="success"] { border-color: var(--green-500); }
 .Button--success,
 .Button--success-outline:hover {
   background-color: var(--green-500);
   color: var(--white);
 }
-.Button--success:hover {
-  background-color: var(--green-400);
-}
+.Button--success:hover { background-color: var(--green-400); }
 
 /* Shape */
 .Button--pill { border-radius: var(--shape-pill); }
