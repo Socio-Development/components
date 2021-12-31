@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Mode } from '../../typings/types'
 // CSS
 import './Alert.css'
 
@@ -18,7 +19,7 @@ export interface AlertProps {
   /**
    * Alert display mode
    */
-  mode?: 'danger' | 'dark' | 'default' | 'primary' | 'success'
+  mode?: Mode
   /**
    * Alert corner shape
    * (shape="pill" will only display text on a single line)
