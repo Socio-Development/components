@@ -13,6 +13,10 @@ export interface ButtonProps {
    */
   mode?: Mode
   /**
+   * Display the button as outlined?
+   */
+  outline?: boolean
+  /**
    * Alert corner shape
    */
   shape?: Shape
@@ -32,6 +36,7 @@ export interface ButtonProps {
 export default function Button({
   label,
   mode = 'default',
+  outline,
   shape = 'soft',
   size = 'medium',
   ...props
@@ -40,7 +45,7 @@ export default function Button({
     <button
       className={[
         'Button',
-        `Button--${mode}`,
+        outline ? `Button--${mode}-outline` : `Button--${mode}`,
         `Button--${shape}`,
         `Button--${size}`,
       ].join(' ')}

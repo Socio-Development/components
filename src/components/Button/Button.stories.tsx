@@ -14,7 +14,8 @@ Default.args = {
   label: 'Click me',
   mode: 'default',
   shape: 'soft',
-  size: 'medium'
+  size: 'medium',
+  outline: false
 }
 
 export const Modes: Story<ButtonProps> = args => (
@@ -54,4 +55,10 @@ export const Shapes: Story<ButtonProps> = args => (
 )
 Shapes.args = {
   ...Default.args
+}
+
+export const Outline = Modes.bind({})
+Outline.args = {
+  ...Default.args,
+  outline: true
 }
