@@ -11,6 +11,7 @@ type TColorName =
   | 'orange'
   | 'purple'
   | 'red'
+  | 'teal'
   | 'yellow'
 
 type TColorPalette = { [keys in TColorName]: TColor }
@@ -103,6 +104,17 @@ const ColorPalette: TColorPalette = {
     700: '#842029',
     800: '#58151c',
     900: '#2c0b0e',
+  },
+  teal: {
+    100: '#d2f4ea',
+    200: '#a6e9d5',
+    300: '#79dfc1',
+    400: '#4dd4ac',
+    500: '#20c997',
+    600: '#1aa179',
+    700: '#13795b',
+    800: '#0d503c',
+    900: '#06281e',
   },
   yellow: {
     100: '#fff3cd',
