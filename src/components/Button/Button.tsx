@@ -56,23 +56,23 @@ export default function Button({
     setIsHovering(false)
   }
 
-  const style = Style.colors.theme[mode]
+  const style = Style.colors[mode]
 
   const defaultStyle = {
     backgroundColor: !isHovering ? style.background : style.backgroundHover,
-    borderColor: style.background,
+    borderColor: !isHovering ? style.background : style.backgroundHover,
     color: style.foreground
   }
   const outlineStyle = {
-    ...defaultStyle,
     backgroundColor: !isHovering ? 'transparent' : style.background,
+    borderColor: style.background,
     color: !isHovering ? style.background : style.foreground
   }
+
   return (
     <button
       className={[
         'Button',
-        outline ? `Button--${mode}-outline` : `Button--${mode}`,
         `Button--${shape}`,
         `Button--${size}`,
         disabled && 'disabled',

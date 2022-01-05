@@ -1,16 +1,6 @@
 import { Mode } from "./typings/types"
 
-interface IStyle {
-  colors: {
-    palette: TColorPalette
-    theme: TColorTheme
-  }
-}
-
-type TColor = {
-  [keys in TColorNumber]: string
-}
-
+type TColor = { [keys in TColorNumber]: string }
 type TColorNumber = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
 type TColorName =
   | 'blue'
@@ -20,17 +10,7 @@ type TColorName =
   | 'red'
   | 'yellow'
 
-type TColorPalette = {
-  [keys in TColorName]: TColor
-}
-
-type TColorTheme = {
-  [keys in Mode]: {
-    background: string
-    backgroundHover: string
-    foreground: string
-  }
-}
+type TColorPalette = { [keys in TColorName]: TColor }
 
 const ColorPalette: TColorPalette = {
   blue: {
@@ -106,17 +86,20 @@ class ThemeColor {
   private _backgroundHover: string
   private _color: TColorName
   private _foreground: string
+  private _shade: TColor
 
   constructor(color: TColorName) {
     this._color = color
     this._background = ColorPalette[color][500]
     this._backgroundHover = this.setBackgroundHover()
     this._foreground = this.setForeground()
+    this._shade = ColorPalette[color]
   }
 
   get background() { return this._background }
   get backgroundHover() { return this._backgroundHover }
   get foreground() { return this._foreground }
+  get shade() { return this._shade }
 
   setBackgroundHover() {
     switch (this._color) {
@@ -142,6 +125,14 @@ class ThemeColor {
   }
 }
 
+type TColorTheme = {
+  [keys in Mode]: {
+    background: string
+    backgroundHover: string
+    foreground: string
+  }
+}
+
 const ColorTheme: TColorTheme = {
   danger: new ThemeColor('red'),
   dark: {
@@ -159,9 +150,13 @@ const ColorTheme: TColorTheme = {
   success: new ThemeColor('green'),
 }
 
+interface IStyle {
+  colors: TColorPalette & TColorTheme
+}
+
 export const Style: IStyle = {
   colors: {
-    palette: ColorPalette,
-    theme: ColorTheme,
+    ...ColorPalette,
+    ...ColorTheme,
   }
 }
