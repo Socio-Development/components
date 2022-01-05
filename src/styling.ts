@@ -8,6 +8,7 @@ type TColorName =
   | 'gray'
   | 'green'
   | 'indigo'
+  | 'orange'
   | 'red'
   | 'yellow'
 
@@ -68,6 +69,17 @@ const ColorPalette: TColorPalette = {
     700: '#3d0a91',
     800: '#290661',
     900: '#140330',
+  },
+  orange: {
+    100: '#ffe5d0',
+    200: '#fecba1',
+    300: '#feb272',
+    400: '#fd9843',
+    500: '#fd7e14',
+    600: '#ca6510',
+    700: '#984c0c',
+    800: '#653208',
+    900: '#331904',
   },
   red: {
     100: '#f8d7da',
