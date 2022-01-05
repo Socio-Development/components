@@ -1,4 +1,7 @@
 .Alert {
+  --spacing-x: 1.6rem;
+  --spacing-y: 1rem;
+  --text-size: 1rem;
   border: 1px solid transparent;
   display: flex;
   flex-direction: row;
@@ -7,8 +10,9 @@
 }
 
 .Alert--text {
-  margin: 0 1.6rem;
-  padding: 1rem 0;
+  font-size: var(--text-size);
+  margin: 0 var(--spacing-x);
+  padding: var(--spacing-y) 0;
 }
 
 /* Dismissable */
@@ -69,6 +73,11 @@
   border-color: var(--gray-400);
   color: var(--gray-900);
 }
+.Alert--info {
+  background-color: var(--cyan-100);
+  border-color: var(--cyan-200);
+  color: var(--cyan-800);
+}
 
 .Alert--primary {
   background-color: var(--primary-100);
@@ -85,10 +94,13 @@
 /* Shape */
 .Alert--pill {
   border-radius: var(--shape-pill);
+  height: calc(var(--text-size) + (var(--spacing-y) * 2));
+  scrollbar-color: var(--gray-500) transparent;
 }
 .Alert--pill .Alert--text {
+  line-height: 1;
   overflow-x: scroll;
-  text-overflow: ellipsis;
+  overflow-y: hidden;
   white-space: nowrap;
 }
 

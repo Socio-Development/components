@@ -23,6 +23,7 @@ export const Modes: Story<AlertProps> = args => (<>
   <Alert {...args} mode="primary" label={ `Primary: ${args.label}` } />
   <Alert {...args} mode="success" label={ `Success: ${args.label}` } />
   <Alert {...args} mode="danger" label={ `Danger: ${args.label}` } />
+  <Alert {...args} mode="info" label={ `Info: ${args.label}` } />
   <Alert {...args} mode="dark" label={ `Dark: ${args.label}` } />
 </>)
 Modes.args = {
