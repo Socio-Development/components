@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Style } from '../../styling'
 import { Mode, Shape } from '../../typings/types'
 // CSS
 import './Button.css'
@@ -46,6 +47,27 @@ export default function Button({
   size = 'medium',
   ...props
 }: ButtonProps) {
+  const [isHovering, setIsHovering] = useState(false)
+
+  const handleMouseEnter = () => {
+    setIsHovering(true)
+  }
+  const handleMouseLeave = () => {
+    setIsHovering(false)
+  }
+
+  const style = Style.colors.theme[mode]
+
+  const defaultStyle = {
+    backgroundColor: !isHovering ? style.background : style.backgroundHover,
+    borderColor: style.background,
+    color: style.foreground
+  }
+  const outlineStyle = {
+    ...defaultStyle,
+    backgroundColor: !isHovering ? 'transparent' : style.background,
+    color: !isHovering ? style.background : style.foreground
+  }
   return (
     <button
       className={[
@@ -55,6 +77,9 @@ export default function Button({
         `Button--${size}`,
         disabled && 'disabled',
       ].join(' ')}
+      style={ outline ? outlineStyle : defaultStyle }
+      onMouseEnter={ handleMouseEnter }
+      onMouseLeave={ handleMouseLeave }
       {...props}
     >
       { label }
