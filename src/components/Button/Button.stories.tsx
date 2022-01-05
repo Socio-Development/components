@@ -15,7 +15,8 @@ Default.args = {
   mode: 'default',
   shape: 'soft',
   size: 'medium',
-  outline: false
+  outline: false,
+  disabled: false
 }
 
 export const Modes: Story<ButtonProps> = args => (
@@ -61,4 +62,10 @@ export const Outline = Modes.bind({})
 Outline.args = {
   ...Default.args,
   outline: true
+}
+
+export const Disabled = Modes.bind({})
+Disabled.args = {
+  ...Default.args,
+  disabled: true
 }

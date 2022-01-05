@@ -5,6 +5,10 @@ import './Button.css'
 
 export interface ButtonProps {
   /**
+   * Is the button disabled?
+   */
+  disabled?: boolean
+  /**
    * Button contents
    */
   label: string
@@ -34,6 +38,7 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 export default function Button({
+  disabled,
   label,
   mode = 'default',
   outline,
@@ -48,6 +53,7 @@ export default function Button({
         outline ? `Button--${mode}-outline` : `Button--${mode}`,
         `Button--${shape}`,
         `Button--${size}`,
+        disabled && 'disabled',
       ].join(' ')}
       {...props}
     >

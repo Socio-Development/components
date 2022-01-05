@@ -5,6 +5,12 @@
   line-height: 1;
 }
 
+/* Disabled */
+.Button.disabled {
+  opacity: .65;
+  pointer-events: none;
+}
+
 /* Outline */
 .Button[class*="-outline"] { background-color: transparent; }
 
