@@ -2,6 +2,7 @@ export type Mode =
   | 'danger'
   | 'dark'
   | 'default'
+  | 'info'
   | 'primary'
   | 'success'
 

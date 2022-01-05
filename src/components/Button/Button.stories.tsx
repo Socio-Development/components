@@ -32,6 +32,7 @@ export const Modes: Story<ButtonProps> = args => (
     <Button {...args} mode="primary" />
     <Button {...args} mode="success" />
     <Button {...args} mode="danger" />
+    <Button {...args} mode="info" />
     <Button {...args} mode="dark" />
   </div>
 )
