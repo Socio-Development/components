@@ -1,4 +1,4 @@
-import { Mode } from "./typings/types"
+import { Mode, Shape } from "./typings/types"
 
 type TColor = { [keys in TColorNumber]: string }
 type TColorNumber = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
@@ -151,12 +151,19 @@ const ColorTheme: TColorTheme = {
 }
 
 interface IStyle {
-  colors: TColorPalette & TColorTheme
+  color: TColorPalette & TColorTheme
+  shape: { [keys in Shape]: string }
 }
 
 export const Style: IStyle = {
-  colors: {
+  color: {
     ...ColorPalette,
     ...ColorTheme,
-  }
+  },
+  shape: {
+    pill: '10rem',
+    rounded: '.75rem',
+    soft: '.25rem',
+    square: '0',
+  },
 }

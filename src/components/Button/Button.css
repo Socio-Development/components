@@ -11,12 +11,6 @@
   pointer-events: none;
 }
 
-/* Shape */
-.Button--pill { border-radius: var(--shape-pill); }
-.Button--rounded { border-radius: var(--shape-rounded); }
-.Button--soft { border-radius: var(--shape-soft); }
-.Button--square { border-radius: var(--shape-square); }
-
 /* Size */
 .Button--small {
   font-size: .75rem;
