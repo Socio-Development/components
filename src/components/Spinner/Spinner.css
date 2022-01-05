@@ -32,5 +32,6 @@
 .Spinner--danger { border-color: var(--red-500); }
 .Spinner--dark { border-color: var(--gray-900); }
 .Spinner--default { border-color: var(--gray-600); }
+.Spinner--info { border-color: var(--cyan-500); }
 .Spinner--primary { border-color: var(--primary-500); }
 .Spinner--success { border-color: var(--green-500); }

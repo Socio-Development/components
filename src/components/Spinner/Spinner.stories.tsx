@@ -27,6 +27,7 @@ export const Modes: Story<SpinnerProps> = args => (
     <Spinner {...args} mode="primary" />
     <Spinner {...args} mode="success" />
     <Spinner {...args} mode="danger" />
+    <Spinner {...args} mode="info" />
     <Spinner {...args} mode="dark" />
   </div>
 )
