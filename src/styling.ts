@@ -7,6 +7,7 @@ type TColorName =
   | 'cyan'
   | 'gray'
   | 'green'
+  | 'indigo'
   | 'red'
   | 'yellow'
 
@@ -56,6 +57,17 @@ const ColorPalette: TColorPalette = {
     700: '#0f5132',
     800: '#0a3622',
     900: '#051b11',
+  },
+  indigo: {
+    100: '#e0cffc',
+    200: '#c29ffa',
+    300: '#a370f7',
+    400: '#8540f5',
+    500: '#6610f2',
+    600: '#520dc2',
+    700: '#3d0a91',
+    800: '#290661',
+    900: '#140330',
   },
   red: {
     100: '#f8d7da',
