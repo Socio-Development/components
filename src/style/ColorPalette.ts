@@ -1,5 +1,37 @@
 import { TColorPalette } from '../typings/types'
 
+/**
+ * ## The color palette
+ * 
+ * Use the `ColorPalette` object to assign colors with a shade between 100 and 900.
+ * 
+ * **Code**
+ * ```typescript
+ * const myColor = ColorPalette.blue[500]
+ * ```
+ * 
+ * **Types**
+ * 
+ * ```typescript
+ * type TColorPalette =
+ *  | 'blue'
+ *  | 'cyan'
+ *  | 'gray'
+ *  | 'green'
+ *  | 'indigo'
+ *  | 'orange'
+ *  | 'purple'
+ *  | 'red'
+ *  | 'teal'
+ *  | 'yellow'
+ * ```
+ * 
+ * ---
+ * 
+ * @author CasperSocio
+ * @version 0.0.1
+ * @since 0.0.1
+ */
 const ColorPalette: TColorPalette = {
   blue: {
     100: '#cfe2ff',
