@@ -1,6 +1,6 @@
-import Alert from './components/alert/Alert'
-import Button from './components/button/Button'
-import Spinner from './components/spinner/Spinner'
+import Alert from './components/Alert'
+import Button from './components/Button'
+import Spinner from './components/Spinner'
 
 export {
   Alert,

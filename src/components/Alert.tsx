@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Mode, Shape } from '../../typings/types'
+import { Mode, Shape } from '../typings/types'
 
 export interface AlertProps {
   /**
