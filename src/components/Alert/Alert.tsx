@@ -62,6 +62,7 @@ export default function Alert({
         dismissable && 'Alert--dismissable',
         isHidden && `Alert--exit Alert--exit-${exitAnimation}`
       ].join(' ')}
+      role="alert"
       {...props}
     >
       <span className="Alert--text">{ label }</span>

@@ -1,0 +1,29 @@
+@mixin button-group-shape($shape) {
+  $border-radius: map-get($theme--shape, $shape);
+
+  &.ButtonGroup--#{$shape} {
+    .Button:first-child {
+      border-bottom-left-radius: $border-radius;
+      border-top-left-radius: $border-radius;
+    }
+    .Button:last-child {
+      border-bottom-right-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+  }
+}
+
+.ButtonGroup {
+  display: flex;
+  flex-direction: row;
+
+  .Button {
+    border-radius: 0;
+  }
+
+  /* Shape */
+  @include button-group-shape(pill);
+  @include button-group-shape(rounded);
+  @include button-group-shape(soft);
+  @include button-group-shape(square);
+}

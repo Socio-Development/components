@@ -11,7 +11,7 @@ export interface ButtonProps {
    */
   label: string
   /**
-   * Alert display mode
+   * Button display mode
    */
   mode?: Mode
   /**
@@ -19,7 +19,7 @@ export interface ButtonProps {
    */
   outline?: boolean
   /**
-   * Alert corner shape
+   * Button corner shape
    */
   shape?: Shape
   /**
