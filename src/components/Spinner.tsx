@@ -1,5 +1,5 @@
 import React from 'react'
-import { Mode } from '../typings/types'
+import { TMode } from '../index'
 
 export interface SpinnerProps {
   /**
@@ -9,7 +9,7 @@ export interface SpinnerProps {
   /**
    * Spinner display mode
    */
-  mode?: Mode
+  mode?: TMode
 }
 
 /**

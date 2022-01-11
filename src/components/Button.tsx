@@ -1,5 +1,5 @@
 import React from 'react'
-import { Mode, Shape } from '../typings/types'
+import { TMode, TShape } from '../index'
 
 export interface ButtonProps {
   /**
@@ -13,7 +13,7 @@ export interface ButtonProps {
   /**
    * Button display mode
    */
-  mode?: Mode
+  mode?: TMode
   /**
    * Display the button as outlined?
    */
@@ -21,7 +21,7 @@ export interface ButtonProps {
   /**
    * Button corner shape
    */
-  shape?: Shape
+  shape?: TShape
   /**
    * How large should the button be?
    */

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Shape } from '../typings/types'
+import { TShape } from '../index'
 
 export interface ButtonGroupProps {
   /**
@@ -9,7 +9,7 @@ export interface ButtonGroupProps {
   /**
    * ButtonGroup corner shape
    */
-  shape?: Shape
+  shape?: TShape
 }
 
 /**

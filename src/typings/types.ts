@@ -1,4 +1,4 @@
-export type Mode =
+export type TMode =
   | 'danger'
   | 'dark'
   | 'default'
@@ -6,7 +6,7 @@ export type Mode =
   | 'primary'
   | 'success'
 
-export type Shape =
+export type TShape =
   | 'pill'
   | 'rounded'
   | 'soft'
