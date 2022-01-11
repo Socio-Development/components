@@ -1,7 +1,7 @@
 {
   "name": "@socio-development/components",
   "author": "CasperSocio <casper.tollefsen@mobit.no>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The Socio component library",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

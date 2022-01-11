@@ -1,0 +1,158 @@
+.Button {
+  border: 1px solid transparent;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+  /* Disabled */
+  /* Mode */
+  /* Shape */
+  /* Size */
+}
+
+.Button.disabled {
+  opacity: .65;
+  pointer-events: none;
+}
+
+.Button[class*="outline"] {
+  background-color: transparent;
+}
+
+.Button[class*="danger"] {
+  border-color: #dc3545;
+}
+
+.Button.Button--danger, .Button.Button--danger-outline:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.Button.Button--danger:hover {
+  background-color: #b02a37;
+  border-color: #b02a37;
+}
+
+.Button.Button--danger-outline {
+  color: #dc3545;
+}
+
+.Button[class*="dark"] {
+  border-color: #212529;
+}
+
+.Button.Button--dark, .Button.Button--dark-outline:hover {
+  background-color: #212529;
+  color: #fff;
+}
+
+.Button.Button--dark:hover {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.Button.Button--dark-outline {
+  color: #212529;
+}
+
+.Button[class*="default"] {
+  border-color: #6c757d;
+}
+
+.Button.Button--default, .Button.Button--default-outline:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.Button.Button--default:hover {
+  background-color: #495057;
+  border-color: #495057;
+}
+
+.Button.Button--default-outline {
+  color: #6c757d;
+}
+
+.Button[class*="info"] {
+  border-color: #3dd5f3;
+}
+
+.Button.Button--info, .Button.Button--info-outline:hover {
+  background-color: #3dd5f3;
+  color: #000;
+}
+
+.Button.Button--info:hover {
+  background-color: #6edff6;
+  border-color: #6edff6;
+}
+
+.Button.Button--info-outline {
+  color: #3dd5f3;
+}
+
+.Button[class*="primary"] {
+  border-color: #0d6efd;
+}
+
+.Button.Button--primary, .Button.Button--primary-outline:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.Button.Button--primary:hover {
+  background-color: #0a58ca;
+  border-color: #0a58ca;
+}
+
+.Button.Button--primary-outline {
+  color: #0d6efd;
+}
+
+.Button[class*="success"] {
+  border-color: #198754;
+}
+
+.Button.Button--success, .Button.Button--success-outline:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+.Button.Button--success:hover {
+  background-color: #146c43;
+  border-color: #146c43;
+}
+
+.Button.Button--success-outline {
+  color: #198754;
+}
+
+.Button.Button--pill {
+  border-radius: 10rem;
+}
+
+.Button.Button--rounded {
+  border-radius: 0.75rem;
+}
+
+.Button.Button--soft {
+  border-radius: 0.25rem;
+}
+
+.Button.Button--square {
+  border-radius: 0;
+}
+
+.Button.Button--small {
+  font-size: .75rem;
+  padding: .625rem 1rem;
+}
+
+.Button.Button--medium {
+  font-size: .875rem;
+  padding: .6875rem 1.25rem;
+}
+
+.Button.Button--large {
+  font-size: 1rem;
+  padding: .75rem 1.5rem;
+}

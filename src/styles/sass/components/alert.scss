@@ -1,3 +1,7 @@
+@import '../variables/colors';
+@import '../theme/mode';
+@import '../theme/shape';
+
 @mixin alert-mode($mode) {
   $theme: map-get($theme--mode, $mode);
   $mode-bg: map-get($theme, bg-light);

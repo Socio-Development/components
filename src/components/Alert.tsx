@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Mode, Shape } from '../typings/types'
+import { TMode, TShape } from '../index'
+import '../styles/css/alert.css'
 
 export interface AlertProps {
   /**
@@ -17,12 +18,12 @@ export interface AlertProps {
   /**
    * Alert display mode
    */
-  mode?: Mode
+  mode?: TMode
   /**
    * Alert corner shape
    * (shape="pill" will only display text on a single line)
    */
-  shape?: Shape
+  shape?: TShape
 }
 
 /**
