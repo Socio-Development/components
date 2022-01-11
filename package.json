@@ -4,14 +4,21 @@
   "description": "The Socio component library",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
+  "files": [
+    "lib"
+  ],
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "rm -rf ./lib/ && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass src/styles/sass/main.scss src/styles/css/main.css -w",
     "sb": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "sb:build": "build-storybook"
   },
   "keywords": [
+    "component",
+    "components",
+    "library",
     "react"
   ],
   "author": "CasperSocio <casper.tollefsen@mobit.no>",
@@ -24,9 +31,12 @@
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
     "@storybook/react": "^6.4.9",
+    "@types/node": "^17.0.8",
     "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
     "babel-loader": "^8.2.3",
-    "postcss": "^8.4.5",
+    "babel-preset-react-app": "^10.0.1",
+    "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.62.0",

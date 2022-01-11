@@ -1,0 +1,106 @@
+@mixin alert-mode($mode) {
+  $theme: map-get($theme--mode, $mode);
+  $mode-bg: map-get($theme, bg-light);
+  $mode-border: map-get($theme, border-light);
+  $mode-color: map-get($theme, text-blend);
+
+  &.Alert--#{$mode} {
+    background-color: $mode-bg;
+    border-color: $mode-border;
+    color: $mode-color;
+    .Alert--close {
+      @include close-icon(str-slice(#{$mode-color}, 2, 7));
+    }
+  }
+}
+
+@mixin alert-shape($shape) {
+  &.Alert--#{$shape} {
+    border-radius: map-get($theme--shape, $shape);
+    @if $shape == pill {
+      height: calc($text-size + ($spacing-y * 2));
+      scrollbar-color: var($color--gray-500) transparent;
+
+      .Alert--text {
+        line-height: 1;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@mixin close-icon($color) {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23#{$color}'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1rem auto no-repeat;
+}
+
+.Alert {
+  $spacing-x: 1.6rem;
+  $spacing-y: 1rem;
+  $text-size: 1rem;
+
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  .Alert--text {
+    font-size: $text-size;
+    margin: 0 $spacing-x;
+    padding: $spacing-y 0;
+  }
+
+  .Alert--close {
+    border: 0;
+    border-radius: .25rem;
+    display: block;
+    height: 3.5rem;
+    min-width: 3.5rem;
+    opacity: .5;
+    transition: opacity ease-in-out .2s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.Alert--dismissable {
+    .Alert--text {
+      margin-right: 0;
+    }
+  }
+
+  /* Exit animation */
+  &.Alert--exit {
+    opacity: 0;
+    transition: 1s;
+
+    &.Alert--exit-left {
+      margin-left: -10rem;
+      margin-right: 10rem;
+    }
+    &.Alert--exit-right {
+      margin-left: 10rem;
+      margin-right: -10rem;
+    }
+
+    .Alert--close {
+      visibility: hidden;
+    }
+  }
+
+  /* Mode */
+  @include alert-mode(danger);
+  @include alert-mode(dark);
+  @include alert-mode(default);
+  @include alert-mode(info);
+  @include alert-mode(primary);
+  @include alert-mode(success);
+
+  /* Shape */
+  @include alert-shape(pill);
+  @include alert-shape(rounded);
+  @include alert-shape(soft);
+  @include alert-shape(square);
+}

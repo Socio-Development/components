@@ -1,7 +1,5 @@
 import React from 'react'
 import { Mode, Shape } from '../../typings/types'
-// CSS
-import './Button.css'
 
 export interface ButtonProps {
   /**

@@ -1,7 +1,5 @@
 import React from 'react'
 import { Mode } from '../../typings/types'
-// CSS
-import './Spinner.css'
 
 export interface SpinnerProps {
   /**

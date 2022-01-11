@@ -1,0 +1,72 @@
+@mixin button-mode($mode) {
+  $target: map-get($theme--mode, $mode);
+  $mode-default: map-get($target, default);
+  $mode-hover: map-get($target, hover);
+  $mode-text: map-get($target, text);
+
+  &[class*="#{$mode}"] {
+    border-color: $mode-default;
+  }
+  &.Button--#{$mode},
+  &.Button--#{$mode}-outline:hover {
+    background-color: $mode-default;
+    color: $mode-text;
+  }
+  &.Button--#{$mode}:hover {
+    background-color: $mode-hover;
+    border-color: $mode-hover;
+  }
+  &.Button--#{$mode}-outline {
+    color: $mode-default;
+  }
+}
+
+@mixin button-shape($shape) {
+  &.Button--#{$shape} {
+    border-radius: map-get($theme--shape, $shape);
+  }
+}
+
+.Button {
+  border: 1px solid transparent;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+
+  /* Disabled */
+  &.disabled {
+    opacity: .65;
+    pointer-events: none;
+  }
+
+  /* Mode */
+  &[class*="outline"] {
+    background-color: transparent
+  }
+  @include button-mode("danger");
+  @include button-mode("dark");
+  @include button-mode("default");
+  @include button-mode("info");
+  @include button-mode("primary");
+  @include button-mode("success");
+
+  /* Shape */
+  @include button-shape(pill);
+  @include button-shape(rounded);
+  @include button-shape(soft);
+  @include button-shape(square);
+
+  /* Size */
+  &.Button--small {
+    font-size: .75rem;
+    padding: .625rem 1rem;
+  }
+  &.Button--medium {
+    font-size: .875rem;
+    padding: .6875rem 1.25rem;
+  }
+  &.Button--large {
+    font-size: 1rem;
+    padding: .75rem 1.5rem;
+  }
+}

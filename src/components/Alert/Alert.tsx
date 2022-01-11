@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import { Mode, Shape } from '../../typings/types'
-// CSS
-import './Alert.css'
 
 export interface AlertProps {
   /**
