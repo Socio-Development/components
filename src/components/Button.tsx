@@ -1,5 +1,6 @@
 import React from 'react'
 import { TMode, TShape } from '../index'
+import '../styles/css/button.css'
 
 export interface ButtonProps {
   /**

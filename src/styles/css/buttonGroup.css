@@ -1,0 +1,54 @@
+.ButtonGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Shape */
+}
+
+.ButtonGroup .Button {
+  border-radius: 0;
+}
+
+.ButtonGroup.ButtonGroup--pill .Button:first-child {
+  border-bottom-left-radius: 10rem;
+  border-top-left-radius: 10rem;
+}
+
+.ButtonGroup.ButtonGroup--pill .Button:last-child {
+  border-bottom-right-radius: 10rem;
+  border-top-right-radius: 10rem;
+}
+
+.ButtonGroup.ButtonGroup--rounded .Button:first-child {
+  border-bottom-left-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+}
+
+.ButtonGroup.ButtonGroup--rounded .Button:last-child {
+  border-bottom-right-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.ButtonGroup.ButtonGroup--soft .Button:first-child {
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+
+.ButtonGroup.ButtonGroup--soft .Button:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.ButtonGroup.ButtonGroup--square .Button:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.ButtonGroup.ButtonGroup--square .Button:last-child {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}

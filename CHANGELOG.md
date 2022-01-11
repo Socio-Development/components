@@ -9,6 +9,7 @@
 ### Changes
 
 - All components now import types from `index.ts`.
+- All components now import their styles.
 
 ---
 

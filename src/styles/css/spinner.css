@@ -1,0 +1,62 @@
+@-webkit-keyframes spinner-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.Spinner {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -.125em;
+  border: .25rem solid currentColor;
+  border-right-color: transparent !important;
+  border-radius: 50%;
+  -webkit-animation: linear infinite spinner-rotate;
+  animation: linear infinite spinner-rotate;
+  /* Mode */
+}
+
+.Spinner .Spinner--hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.Spinner.Spinner--danger {
+  border-color: #dc3545;
+}
+
+.Spinner.Spinner--dark {
+  border-color: #212529;
+}
+
+.Spinner.Spinner--default {
+  border-color: #6c757d;
+}
+
+.Spinner.Spinner--info {
+  border-color: #3dd5f3;
+}
+
+.Spinner.Spinner--primary {
+  border-color: #0d6efd;
+}
+
+.Spinner.Spinner--success {
+  border-color: #198754;
+}

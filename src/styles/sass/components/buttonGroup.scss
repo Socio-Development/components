@@ -1,3 +1,5 @@
+@import '../theme/shape';
+
 @mixin button-group-shape($shape) {
   $border-radius: map-get($theme--shape, $shape);
 

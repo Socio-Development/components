@@ -1,3 +1,6 @@
+@import '../variables/colors';
+@import '../theme/index';
+
 @mixin button-mode($mode) {
   $target: map-get($theme--mode, $mode);
   $mode-default: map-get($target, default);

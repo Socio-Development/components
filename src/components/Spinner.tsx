@@ -1,5 +1,6 @@
 import React from 'react'
 import { TMode } from '../index'
+import '../styles/css/spinner.css'
 
 export interface SpinnerProps {
   /**

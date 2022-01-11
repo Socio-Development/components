@@ -1,5 +1,6 @@
 import React from 'react'
 import { TShape } from '../index'
+import '../styles/css/buttonGroup.css'
 
 export interface ButtonGroupProps {
   /**

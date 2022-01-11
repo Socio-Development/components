@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { TMode, TShape } from '../index'
+import '../styles/css/alert.css'
 
 export interface AlertProps {
   /**
