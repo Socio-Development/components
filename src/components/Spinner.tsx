@@ -1,5 +1,5 @@
 import React from 'react'
-import { Mode } from '../../typings/types'
+import { Mode } from '../typings/types'
 
 export interface SpinnerProps {
   /**

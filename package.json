@@ -1,5 +1,6 @@
 {
   "name": "@socio-development/components",
+  "author": "CasperSocio <casper.tollefsen@mobit.no>",
   "version": "0.0.1",
   "description": "The Socio component library",
   "main": "lib/index.js",
@@ -21,7 +22,6 @@
     "library",
     "react"
   ],
-  "author": "CasperSocio <casper.tollefsen@mobit.no>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.5",
