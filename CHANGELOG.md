@@ -2,6 +2,10 @@
 
 ## Latest
 
+### Features
+
+- Added code-snippet for producing a boilerplate Storybook component story.
+
 ### Changes
 
 - Running `npm run sb` will no longer open a new browser window. A new script `npm run sb:open` was created to mimic the old behaviour.

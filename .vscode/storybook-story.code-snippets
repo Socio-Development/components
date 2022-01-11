@@ -1,0 +1,41 @@
+{
+	/**
+	* Place your components workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and description.
+	* Add comma separated ids of the languages where the snippet is applicable in the scope field.
+	* If scope is left empty or omitted, the snippet gets applied to all languages.
+	* The prefix is what is used to trigger the snippet and the body will be expanded and inserted.
+	* 
+	* Possible variables are:
+	* - $1, $2 for tab stops
+	* - $0 for the final cursor position
+	* - ${1:label}, ${2:another} for placeholders
+	* 
+	* Example:
+	* "Print to console": {
+	* 	"scope": "javascript,typescript",
+	* 	"prefix": "log",
+	* 	"body": [
+	* 		"console.log('$1');",
+	* 		"$2"
+	* 	],
+	* 	"description": "Log output to console"
+	* }
+	*/
+	"Add new component story": {
+		"description": "Creates a boilerplate Storybook story.",
+		"scope": "typescriptreact",
+		"prefix": "story",
+		"body": [
+			"import React from 'react'",
+			"import { Meta, Story } from '@storybook/react'",
+			"import ${1:name}, { ${1:name}Props } from '../components/${1:name}'\n",
+			"export default {",
+			"\ttitle: 'Components/${1:name}',",
+			"\tcomponent: ${1:name},",
+			"} as Meta\n",
+			"const Template: Story<${1:name}Props> = args => <${1:name} {...args} />\n",
+			"export const Default = Template.bind({})",
+			"Default.args = {}\n"
+		]
+	}
+}
