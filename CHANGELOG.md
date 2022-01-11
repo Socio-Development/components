@@ -1,5 +1,13 @@
 # Release Notes
 
+## Latest
+
+### Changes
+
+- Running `npm run sb` will no longer open a new browser window. A new script `npm run sb:open` was created to mimic the old behaviour.
+
+---
+
 ## 0.0.2 (Jan 11, 2022)
 
 ### Features
