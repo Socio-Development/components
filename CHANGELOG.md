@@ -6,6 +6,7 @@
 
 - Added code-snippet for producing a boilerplate Storybook component story.
 - Added new icon component `<Close>`.
+- Added new component `<ButtonClose>`.
 
 ### Changes
 
