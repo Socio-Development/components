@@ -28,7 +28,7 @@
 		"body": [
 			"import React from 'react'",
 			"import { Meta, Story } from '@storybook/react'",
-			"import ${1:name}, { ${1:name}Props } from '../components/${1:name}'\n",
+			"import { ${1:name}, ${1:name}Props } from '../components/${1:name}'\n",
 			"export default {",
 			"\ttitle: 'Components/${1:name}',",
 			"\tcomponent: ${1:name},",
