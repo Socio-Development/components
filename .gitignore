@@ -1,6 +1,10 @@
+# Directories
 /lib/
 /node_modules/
 
+# Filetypes
 *.tgz
 
+# Files (specific)
 .DS_Store
+package-lock.json
