@@ -1,0 +1,65 @@
+@import '../variables//colors';
+@import '../theme/shape';
+@import '../mixins/setShape';
+
+.Modal {
+  $background: $color--white;
+  $border-color: $color--gray-600;
+  $divider: $color--gray-400;
+  $min-width: 300px; $max-width: 500px;
+  $spacing: 1rem;
+
+  background-color: $background;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  min-width: $min-width; max-width: $max-width;
+
+  /* Shape */
+  @include set-shape(Modal, rounded);
+  @include set-shape(Modal, soft);
+  @include set-shape(Modal, square);
+
+  .Modal--header {
+    $font-size: 1.2rem;
+    $size: $font-size + ($spacing * 2);
+
+    border-bottom: 1px solid $divider;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .Modal--title {
+      font-size: $font-size;
+      font-weight: 600;
+      line-height: 1;
+      margin: $spacing;
+    }
+  }
+
+  .Modal--content {
+    max-height: 50vh;
+    overflow-y: scroll;
+    padding: #{$spacing};
+    & > * {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.Modal--backdrop {
+  top: 0; left: 0; right: 0; bottom: 0;
+  align-items: center;
+  background-color: rgba($color: #000, $alpha: 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: 50;
+}
