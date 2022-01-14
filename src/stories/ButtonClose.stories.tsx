@@ -10,6 +10,4 @@ export default {
 const Template: Story<ButtonCloseProps> = args => <ButtonClose {...args} />
 
 export const Default = Template.bind({})
-Default.args = {
-  size: 1
-}
+Default.args = {}

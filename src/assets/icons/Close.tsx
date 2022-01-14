@@ -7,8 +7,8 @@ export function Close({...props}) {
       viewBox="0 0 24 24"
       style={{
         display: 'block',
-        height: '1.5rem',
-        width: '1.5rem'
+        height: '24px',
+        width: '24px'
       }}
       {...props}
     >
