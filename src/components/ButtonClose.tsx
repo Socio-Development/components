@@ -3,7 +3,7 @@ import { Close } from '../assets/icons/Close'
 import '../styles/css/buttonClose.css'
 
 export interface ButtonCloseProps {
-  onClick?: () => {}
+  onClick: () => void
 }
 
 export function ButtonClose({
