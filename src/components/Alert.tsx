@@ -29,7 +29,7 @@ export interface AlertProps {
 /**
  * Primary UI component for user notification
  */
-export default function Alert({
+export function Alert({
   dismissable,
   exitAnimation = 'fade',
   label,

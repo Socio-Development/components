@@ -16,7 +16,7 @@ export interface SpinnerProps {
 /**
  * UI component to visualize loading content
  */
-export default function Spinner({
+export function Spinner({
   duration = 1,
   mode = 'default',
   ...props

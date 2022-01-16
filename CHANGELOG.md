@@ -12,6 +12,8 @@
 ### Changes
 
 - Running `npm run sb` will no longer open a new browser window. A new script `npm run sb:open` was created to mimic the old behaviour.
+- Moved exported components into a new Storybook group called "Featured" to separate them from utility components.
+- Removed `default` exports from all components.
 
 ### Other
 

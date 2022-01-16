@@ -16,7 +16,7 @@ export interface ButtonGroupProps {
 /**
  * A container for grouping multiple buttons.
  */
-export default function ButtonGroup({
+export function ButtonGroup({
   children,
   shape = 'soft',
   ...props

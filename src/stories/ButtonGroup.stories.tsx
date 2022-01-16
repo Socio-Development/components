@@ -1,10 +1,10 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import ButtonGroup, { ButtonGroupProps } from '../components/ButtonGroup'
+import { ButtonGroup, ButtonGroupProps } from '../components/ButtonGroup'
 import Button from '../components/Button'
 
 export default {
-  title: 'Components/ButtonGroup',
+  title: 'Featured/ButtonGroup',
   component: ButtonGroup,
 } as Meta
 

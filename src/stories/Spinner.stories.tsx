@@ -1,9 +1,9 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import Spinner, { SpinnerProps } from '../components/Spinner'
+import { Spinner, SpinnerProps } from '../components/Spinner'
 
 export default {
-  title: 'Components/Spinner',
+  title: 'Featured/Spinner',
   component: Spinner,
 } as Meta
 
