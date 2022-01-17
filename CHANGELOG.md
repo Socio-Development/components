@@ -4,6 +4,7 @@
 
 ### Features
 
+- Added pointer cursor on `Button` hover.
 - Added code-snippet for producing a boilerplate Storybook component story.
 - New components:
   - `ContactLink` - Displays either a `mailto:`, or `tel:` link with corresponding icons
