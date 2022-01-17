@@ -15,18 +15,23 @@ export interface ContactLinkProps {
    * ```
    */
   pattern?: number[]
+  /**
+   * The size in 'rem'
+   */
+  size?: number
 }
 
 /**
  * Displays either a `mailto:`, or `tel:` link with corresponding icons
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.0
+ * @version 0.1.1
  * @since 0.1.0
  * @global
  */
 export function ContactLink({
   label,
   pattern = [2, 2, 2, 2],
+  size = 1,
   ...props
 }: ContactLinkProps) {
   
@@ -61,16 +66,25 @@ export function ContactLink({
     <a
       className="ContactLink"
       href={ prefix + label }
+      style={{
+        fontSize: `${size}rem`
+      }}
       {...props}
     >
       { typeof label === 'number' ? (
         <>
-        <PhoneIcon className="ContactLink--icon" />
+        <PhoneIcon
+          className="ContactLink--icon"
+          size={ size }
+        />
         { separateDigits() }
         </>
       ) : (
         <>
-        <MailIcon className="ContactLink--icon" />
+        <MailIcon
+          className="ContactLink--icon"
+          size={ size }
+        />
         { label }
         </>
       )}

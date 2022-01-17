@@ -1,6 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { TestPage } from '../components/TestPage'
+import { ContactLink } from '../components/ContactLink'
 import { Modal } from '../components/Modal'
 import { Default as ModalStory } from './Modal.stories'
 
@@ -20,6 +21,7 @@ const defaultContent: JSX.Element = (
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nobis nihil eum, at consequatur animi vitae facilis. Cum, deleniti? Dignissimos accusantium cumque molestiae dolorem voluptates nesciunt cum porro voluptatem quos.</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nobis nihil eum, at consequatur animi vitae facilis. Cum, deleniti? Dignissimos accusantium cumque molestiae dolorem voluptates nesciunt cum porro voluptatem quos.</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nobis nihil eum, at consequatur animi vitae facilis. Cum, deleniti? Dignissimos accusantium cumque molestiae dolorem voluptates nesciunt cum porro voluptatem quos.</p>
+  <ContactLink label={98765432} />
   </>
 )
 

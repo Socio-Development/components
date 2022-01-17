@@ -6,6 +6,10 @@ interface IconProps {
    */
   d: string
   /**
+   * The size in 'rem'
+   */
+  size?: number
+  /**
    * The path transform definitions
    */
   transform?: string
@@ -17,13 +21,14 @@ interface IconProps {
  * Use this component when adding custom
  * icons.
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.0
+ * @version 0.1.1
  * @param props.d The svg drawing path
  * @param props.transform (optional) The path transform definitions
  * @since 0.1.0
  */
 export function Icon({
   d,
+  size = 1,
   transform,
   ...props
 }: IconProps) {
@@ -33,8 +38,9 @@ export function Icon({
       viewBox="0 0 24 24"
       style={{
         display: 'block',
-        height: '24px',
-        width: '24px'
+        fill: 'currentcolor',
+        height: `${size * 1.5}rem`,
+        width: `${size * 1.5}rem`,
       }}
       {...props}
     >

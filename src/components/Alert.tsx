@@ -30,7 +30,7 @@ export interface AlertProps {
 /**
  * Primary UI component for user notification
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.0
+ * @version 0.1.1
  * @since 0.0.1
  * @global
  */
