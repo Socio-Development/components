@@ -1,0 +1,20 @@
+.ContactLink {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1rem;
+  gap: .6rem;
+  text-decoration: none;
+}
+
+.ContactLink:hover {
+  text-decoration: underline;
+}

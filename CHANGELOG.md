@@ -6,6 +6,7 @@
 
 - Added code-snippet for producing a boilerplate Storybook component story.
 - New components:
+  - `ContactLink` - Displays either a `mailto:`, or `tel:` link with corresponding icons
   - `Modal` - Alert, confirm, prompt dialog box
 - New utility components:
   - `Icon` - Holds svg icons
