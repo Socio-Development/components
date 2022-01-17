@@ -5,9 +5,15 @@
 ### Features
 
 - Added code-snippet for producing a boilerplate Storybook component story.
-- Added new icon component `<Close>`.
-- Added new component `<ButtonClose>`.
-- Added new component `<Modal>`.
+- New components:
+  - `Modal` - Alert, confirm, prompt dialog box
+- New utility components:
+  - `Icon` - Holds svg icons
+  - `ButtonClose` - A "dismiss" button
+- New icon components:
+  - `CloseIcon`
+  - `MailIcon`
+  - `PhoneIcon`
 
 ### Changes
 
