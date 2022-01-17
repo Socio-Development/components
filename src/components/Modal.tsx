@@ -13,10 +13,6 @@ export interface ModalProps {
    */
   children: JSX.Element | JSX.Element[]
   /**
-   * The display mode (color theme)
-   */
-  mode?: TMode
-  /**
    * The corner shape (border-radius)
    */
   shape?: 'rounded' | 'soft' | 'square'
@@ -36,7 +32,6 @@ export interface ModalProps {
 export function Modal({
   backdropClose = true,
   children,
-  mode = 'default',
   shape = 'soft',
   title,
   ...props
@@ -55,7 +50,6 @@ export function Modal({
       <div
         className={[
           'Modal',
-          `Modal--${mode}`,
           `Modal--${shape}`,
         ].join(' ')}
         {...props}
