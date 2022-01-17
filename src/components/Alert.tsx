@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { TMode, TShape } from '../index'
+import { ButtonClose } from './ButtonClose'
 import '../styles/css/alert.css'
 
 export interface AlertProps {
@@ -16,11 +17,11 @@ export interface AlertProps {
    */
   label: string
   /**
-   * Alert display mode
+   * The display mode (color theme)
    */
   mode?: TMode
   /**
-   * Alert corner shape
+   * The corner shape (border-radius)
    * (shape="pill" will only display text on a single line)
    */
   shape?: TShape
@@ -28,8 +29,12 @@ export interface AlertProps {
 
 /**
  * Primary UI component for user notification
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.0.1
+ * @global
  */
-export default function Alert({
+export function Alert({
   dismissable,
   exitAnimation = 'fade',
   label,
@@ -67,7 +72,7 @@ export default function Alert({
       {...props}
     >
       <span className="Alert--text">{ label }</span>
-      { dismissable && closeButton }
+      { dismissable && <ButtonClose onClick={ closeAlert } /> }
     </div>
   )
   return <div />

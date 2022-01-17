@@ -1,14 +1,14 @@
 import React from 'react'
-import { Meta, Story } from '@storybook/react'
-import ButtonGroup, { ButtonGroupProps } from '../components/ButtonGroup'
-import Button from '../components/Button'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { ButtonGroup } from '../components/ButtonGroup'
+import { Button } from '../components/Button'
 
 export default {
-  title: 'Components/ButtonGroup',
+  title: 'Featured/ButtonGroup',
   component: ButtonGroup,
-} as Meta
+} as ComponentMeta<typeof ButtonGroup>
 
-const Template: Story<ButtonGroupProps> = args => <ButtonGroup {...args} />
+const Template: ComponentStory<typeof ButtonGroup> = args => <ButtonGroup {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
