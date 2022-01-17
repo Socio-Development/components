@@ -3,6 +3,7 @@
 /node_modules/
 
 # Filetypes
+*.css
 *.tgz
 
 # Files (specific)
