@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { TMode } from '../index'
 import { ButtonClose } from './ButtonClose'
 import '../styles/css/modal.css'
 
