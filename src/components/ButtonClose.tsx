@@ -1,5 +1,5 @@
 import React from 'react'
-import { Close } from '../assets/icons/Close'
+import { CloseIcon } from '../assets/icons/index'
 import '../styles/css/buttonClose.css'
 
 export interface ButtonCloseProps {
@@ -19,7 +19,7 @@ export function ButtonClose({
       onClick={ onClick }
       {...props}
     >
-      <Close />
+      <CloseIcon />
     </button>
   )
 }
