@@ -28,7 +28,7 @@
 
 ### Other
 
-- Updated Storybook to `v6.4.12`.
+- Updated Storybook to `6.4.13`.
 
 ---
 
