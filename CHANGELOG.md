@@ -1,6 +1,6 @@
 # Release Notes
 
-## Next
+## 0.1.0 (Jan 17, 2022)
 
 ### Features
 
