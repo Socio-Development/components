@@ -1,6 +1,13 @@
 import React from 'react'
 import { Icon } from './Icon'
 
+/**
+ * This component generates the closing icon used by the
+ * `ButtonClose` component
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.1.0
+ */
 export function CloseIcon({...props}) {
   return (
     <Icon

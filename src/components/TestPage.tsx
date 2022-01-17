@@ -4,6 +4,12 @@ export interface TestPageProps {
   children: JSX.Element | JSX.Element[]
 }
 
+/**
+ * Page for testing component behaviour
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.1.0
+ */
 export function TestPage({
   children,
   ...props

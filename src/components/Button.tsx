@@ -12,7 +12,7 @@ export interface ButtonProps {
    */
   label: string
   /**
-   * Button display mode
+   * The display mode (color theme)
    */
   mode?: TMode
   /**
@@ -20,7 +20,7 @@ export interface ButtonProps {
    */
   outline?: boolean
   /**
-   * Button corner shape
+   * The corner shape (border-radius)
    */
   shape?: TShape
   /**
@@ -35,6 +35,10 @@ export interface ButtonProps {
 
 /**
  * Primary UI component for user interaction
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.0.1
+ * @global
  */
 export function Button({
   disabled,

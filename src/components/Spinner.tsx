@@ -4,17 +4,21 @@ import '../styles/css/spinner.css'
 
 export interface SpinnerProps {
   /**
-   * Spinner animation speed
+   * The animation (rotation) speed
    */
   duration?: number
   /**
-   * Spinner display mode
+   * The display mode (color theme)
    */
   mode?: TMode
 }
 
 /**
  * UI component to visualize loading content
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.0.1
+ * @global
  */
 export function Spinner({
   duration = 1,

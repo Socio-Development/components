@@ -1,19 +1,38 @@
 import React, { useState } from 'react'
 import { TMode } from '../index'
-import '../styles/css/modal.css'
 import { ButtonClose } from './ButtonClose'
+import '../styles/css/modal.css'
 
 export interface ModalProps {
   /**
-   * Enable close by backdrop click?
+   * Enables the ability to close by clicking outside the modal
    */
   backdropClose?: boolean
+  /**
+   * The component children
+   */
   children: JSX.Element | JSX.Element[]
+  /**
+   * The display mode (color theme)
+   */
   mode?: TMode
+  /**
+   * The corner shape (border-radius)
+   */
   shape?: 'rounded' | 'soft' | 'square'
+  /**
+   * The heading at the top
+   */
   title: string
 }
 
+/**
+ * Primary UI component for pop-up notifications
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.1.0
+ * @global
+ */
 export function Modal({
   backdropClose = true,
   children,

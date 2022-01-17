@@ -17,11 +17,11 @@ export interface AlertProps {
    */
   label: string
   /**
-   * Alert display mode
+   * The display mode (color theme)
    */
   mode?: TMode
   /**
-   * Alert corner shape
+   * The corner shape (border-radius)
    * (shape="pill" will only display text on a single line)
    */
   shape?: TShape
@@ -29,6 +29,10 @@ export interface AlertProps {
 
 /**
  * Primary UI component for user notification
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.0.1
+ * @global
  */
 export function Alert({
   dismissable,

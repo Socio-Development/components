@@ -1,6 +1,13 @@
 import React from 'react'
 import { Icon } from './Icon'
 
+/**
+ * This component generates the mail icon used by the
+ * `ContactLink` component
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.1.0
+ */
 export function MailIcon({...props}) {
   return (
     <Icon

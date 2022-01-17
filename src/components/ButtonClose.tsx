@@ -9,6 +9,12 @@ export interface ButtonCloseProps {
   onClick: () => void
 }
 
+/**
+ * Adds a closing button to dismissable components
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.1.0
+ */
 export function ButtonClose({
   onClick,
   ...props

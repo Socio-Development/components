@@ -4,17 +4,21 @@ import '../styles/css/buttonGroup.css'
 
 export interface ButtonGroupProps {
   /**
-   * The button elements
+   * The `Button` components that goes inside the group
    */
   children: JSX.Element[]
   /**
-   * ButtonGroup corner shape
+   * The corner shape (border-radius)
    */
   shape?: TShape
 }
 
 /**
- * A container for grouping multiple buttons.
+ * A container for grouping multiple buttons
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.0.1
+ * @global
  */
 export function ButtonGroup({
   children,

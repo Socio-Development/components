@@ -8,11 +8,22 @@ export interface ContactLinkProps {
    */
   label: number | string
   /**
-   * How to space digits in the phone number
+   * Phone number digit separation pattern
+   * @example ```javascript
+   * <ContactLink label="12345678" pattern={[3, 2, 3]} />
+   * // Displays the number as "123 45 678"
+   * ```
    */
   pattern?: number[]
 }
 
+/**
+ * Displays either a `mailto:`, or `tel:` link with corresponding icons
+ * @author [CasperSocio](https://github.com/CasperSocio)
+ * @version 0.1.0
+ * @since 0.1.0
+ * @global
+ */
 export function ContactLink({
   label,
   pattern = [2, 2, 2, 2],
