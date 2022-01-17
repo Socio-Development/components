@@ -1,13 +1,13 @@
 import React from 'react'
-import { Meta, Story } from '@storybook/react'
-import { Alert, AlertProps } from '../components/Alert'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Alert } from '../components/Alert'
 
 export default {
   title: 'Featured/Alert',
   component: Alert,
-} as Meta
+} as ComponentMeta<typeof Alert>
 
-const Template: Story<AlertProps> = args => <Alert {...args} />
+const Template: ComponentStory<typeof Alert> = args => <Alert {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
@@ -18,7 +18,7 @@ Default.args = {
   exitAnimation: 'fade'
 }
 
-export const Modes: Story<AlertProps> = args => (<>
+export const Modes: ComponentStory<typeof Alert> = args => (<>
   <Alert {...args} mode="default" label={ `Default: ${args.label}` } />
   <Alert {...args} mode="primary" label={ `Primary: ${args.label}` } />
   <Alert {...args} mode="success" label={ `Success: ${args.label}` } />
@@ -30,7 +30,7 @@ Modes.args = {
   ...Default.args
 }
 
-export const Shapes: Story<AlertProps> = args => (<>
+export const Shapes: ComponentStory<typeof Alert> = args => (<>
   <Alert {...args} shape="pill" label={ `Pill: ${args.label}` } />
   <Alert {...args} shape="rounded" label={ `Rounded: ${args.label}` } />
   <Alert {...args} shape="soft" label={ `Soft: ${args.label}` } />

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Meta, Story } from '@storybook/react'
-import { TestPage, TestPageProps } from '../components/TestPage'
-import { Modal, ModalProps } from '../components/Modal'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { TestPage } from '../components/TestPage'
+import { Modal } from '../components/Modal'
 import { Default as ModalStory } from './Modal.stories'
 
 export default {
@@ -10,9 +10,9 @@ export default {
   subcomponents: {
     Modal
   },
-} as Meta
+} as ComponentMeta<typeof TestPage>
 
-const Template: Story<TestPageProps> = args => <TestPage {...args} />
+const Template: ComponentStory<typeof TestPage> = args => <TestPage {...args} />
 
 const defaultContent: JSX.Element = (
   <>
@@ -28,7 +28,7 @@ Default.args = {
   children: defaultContent
 }
 
-export const WithModal: Story<ModalProps> = args => (
+export const WithModal: ComponentStory<typeof Modal> = args => (
   <TestPage>
     <Modal {...args} />
     { defaultContent }

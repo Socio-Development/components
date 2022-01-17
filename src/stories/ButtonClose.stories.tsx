@@ -1,13 +1,13 @@
 import React from 'react'
-import { Meta, Story } from '@storybook/react'
-import { ButtonClose, ButtonCloseProps } from '../components/ButtonClose'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { ButtonClose } from '../components/ButtonClose'
 
 export default {
   title: 'Components/ButtonClose',
   component: ButtonClose,
-} as Meta
+} as ComponentMeta<typeof ButtonClose>
 
-const Template: Story<ButtonCloseProps> = args => <ButtonClose {...args} />
+const Template: ComponentStory<typeof ButtonClose> = args => <ButtonClose {...args} />
 
 export const Default = Template.bind({})
 Default.args = {}

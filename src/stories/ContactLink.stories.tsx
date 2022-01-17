@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { ContactLink, ContactLinkProps } from '../components/ContactLink'
+import { ContactLink } from '../components/ContactLink'
 
 export default {
   title: 'Featured/ContactLink',

@@ -1,13 +1,13 @@
 import React from 'react'
-import { Meta, Story } from '@storybook/react'
-import { Button, ButtonProps } from '../components/Button'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Button } from '../components/Button'
 
 export default {
   title: 'Featured/Button',
   component: Button,
-} as Meta
+} as ComponentMeta<typeof Button>
 
-const Template: Story<ButtonProps> = args => <Button {...args} />
+const Template: ComponentStory<typeof Button> = args => <Button {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
@@ -19,7 +19,7 @@ Default.args = {
   disabled: false
 }
 
-export const Modes: Story<ButtonProps> = args => (
+export const Modes: ComponentStory<typeof Button> = args => (
   <div
     style={{
       alignItems: 'start',
@@ -40,7 +40,7 @@ Modes.args = {
   ...Default.args
 }
 
-export const Shapes: Story<ButtonProps> = args => (
+export const Shapes: ComponentStory<typeof Button> = args => (
   <div
     style={{
       alignItems: 'start',
