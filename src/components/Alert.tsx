@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { TMode, TShape } from '../index'
+import { ButtonClose } from './ButtonClose'
 import '../styles/css/alert.css'
 
 export interface AlertProps {
@@ -67,7 +68,7 @@ export function Alert({
       {...props}
     >
       <span className="Alert--text">{ label }</span>
-      { dismissable && closeButton }
+      { dismissable && <ButtonClose onClick={ closeAlert } /> }
     </div>
   )
   return <div />

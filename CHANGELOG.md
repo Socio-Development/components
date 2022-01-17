@@ -23,6 +23,7 @@
 - Moved exported components into a new Storybook group called "Featured" to separate them from utility components.
 - Removed `default` exports from all components.
 - Configured all stories to better support TypeScript.
+- Add `ButtonClose` to `Alert`.
 
 ### Other
 
