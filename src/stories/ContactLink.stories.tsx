@@ -11,11 +11,13 @@ const Template: ComponentStory<typeof ContactLink> = args => <ContactLink {...ar
 
 export const Email = Template.bind({})
 Email.args = {
-  label: 'post@email.com'
+  label: 'post@email.com',
+  size: 1
 }
 
 export const Phone = Template.bind({})
 Phone.args = {
   label: 12345678,
+  size: 1,
   pattern: [2, 2, 2, 2]
 }

@@ -1,5 +1,18 @@
 # Release Notes
 
+## 0.1.1 (Jan 28, 2022)
+
+### Features
+
+- Added a `size` prop to the `ContactLink` and `Icon` components.
+
+### Changes
+
+- `ButtonClose`, `ContactLink` and `Icon` now inherit color from its parent element.
+- `Alert`: Removed `ButtonClose` styling.
+
+---
+
 ## 0.1.0 (Jan 17, 2022)
 
 ### Features

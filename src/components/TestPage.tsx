@@ -7,7 +7,7 @@ export interface TestPageProps {
 /**
  * Page for testing component behaviour
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.0
+ * @version 0.1.1
  * @since 0.1.0
  */
 export function TestPage({
