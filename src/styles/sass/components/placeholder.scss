@@ -1,0 +1,31 @@
+@import '../variables/colors';
+@import '../theme/index';
+
+@keyframes Placeholder-glow {
+  50% {
+    opacity: .2;
+  }
+}
+
+@mixin Placeholder-shape($shape) {
+  &.Placeholder--#{$shape} {
+    border-radius: map-get($theme--shape, $shape);
+  }
+}
+
+.Placeholder {
+  background-color: currentColor;
+  display: inline-block;
+  opacity: .5;
+  vertical-align: middle;
+
+  &.Placeholder--animate {
+    animation: Placeholder-glow 2s ease-in-out infinite;
+  }
+
+  /* Shape */
+  @include Placeholder-shape(pill);
+  @include Placeholder-shape(rounded);
+  @include Placeholder-shape(soft);
+  @include Placeholder-shape(square);
+}

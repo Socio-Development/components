@@ -4,6 +4,9 @@
 
 ### Features
 
+- New components:
+  - `Placeholder` - Can replace loading elements.
+
 ### Changes
 
 ### Other
