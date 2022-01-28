@@ -1,5 +1,17 @@
 # Release Notes
 
+## 0.2.0
+
+### Features
+
+### Changes
+
+### Other
+
+- Updated Storybook to `6.4.15`.
+
+---
+
 ## 0.1.1 (Jan 28, 2022)
 
 ### Features
