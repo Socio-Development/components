@@ -1,6 +1,6 @@
 import React from 'react'
 import { MailIcon, PhoneIcon } from '../assets/Icons'
-import '../styles/css/contactLink.css'
+import '../assets/css/contactLink.css'
 
 export interface ContactLinkProps {
   /**

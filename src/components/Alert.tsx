@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { TMode, TShape } from '../index'
 import { ButtonClose } from './ButtonClose'
-import '../styles/css/alert.css'
+import '../assets/css/alert.css'
 
 export interface AlertProps {
   /**

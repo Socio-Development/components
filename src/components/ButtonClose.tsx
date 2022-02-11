@@ -1,6 +1,6 @@
 import React from 'react'
 import { CloseIcon } from '../assets/Icons'
-import '../styles/css/buttonClose.css'
+import '../assets/css/buttonClose.css'
 
 export interface ButtonCloseProps {
   /**

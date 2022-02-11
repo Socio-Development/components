@@ -1,6 +1,6 @@
 import React from 'react'
 import { TShape } from '..'
-import '../styles/css/placeholder.css'
+import '../assets/css/placeholder.css'
 
 export interface PlaceholderProps {
   /**

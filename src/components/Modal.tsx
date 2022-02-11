@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ButtonClose } from './ButtonClose'
-import '../styles/css/modal.css'
+import '../assets/css/modal.css'
 
 export interface ModalProps {
   /**
