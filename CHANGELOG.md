@@ -9,6 +9,9 @@
 
 ### Changes
 
+- Moved `src/styles/css/` to `src/assets/css/`.
+- Moved `src/styles/sass/` to `src/sass/`.
+
 ### Other
 
 - Updated Storybook to `6.4.15`.
