@@ -1,0 +1,31 @@
+// Colors
+$black: #000000;
+$blue: #0d6efd;
+$cyan: #0dcaf0;
+$gray: #adb5bd;
+$green: #198754;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$red: #dc3545;
+$teal: #20c997;
+$yellow: #ffc107;
+$white: #ffffff;
+
+// Theme: Colors
+$theme--color: (
+  danger: $red,
+  dark: #3c3c3c,
+  info: $cyan,
+  light: #f0f0f0,
+  primary: #5d6dd2,
+  success: $green,
+  warning: $yellow
+);
+
+// Theme: Shapes
+$theme--shape: (
+  pill: 500px,
+  rounded: .75rem,
+  soft: .25rem,
+  square: 0
+);

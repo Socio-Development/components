@@ -1,15 +1,8 @@
-@import '../variables/colors';
-@import '../theme/index';
+@import '../abstract/mixins';
 
 @keyframes Placeholder-glow {
   50% {
     opacity: .2;
-  }
-}
-
-@mixin Placeholder-shape($shape) {
-  &.Placeholder--#{$shape} {
-    border-radius: map-get($theme--shape, $shape);
   }
 }
 
@@ -23,9 +16,9 @@
     animation: Placeholder-glow 2s ease-in-out infinite;
   }
 
-  /* Shape */
-  @include Placeholder-shape(pill);
-  @include Placeholder-shape(rounded);
-  @include Placeholder-shape(soft);
-  @include Placeholder-shape(square);
+  // Shape
+  @include shape(Placeholder, pill);
+  @include shape(Placeholder, rounded);
+  @include shape(Placeholder, soft);
+  @include shape(Placeholder, square);
 }

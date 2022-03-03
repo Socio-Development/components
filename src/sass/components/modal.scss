@@ -1,36 +1,30 @@
-@import '../variables//colors';
-@import '../theme/shape';
-@import '../mixins/setShape';
+@import '../abstract/variables';
+@import '../abstract/functions';
+@import '../abstract/mixins';
 
 .Modal {
-  $background: $color--white;
-  $border-color: $color--gray-600;
-  $divider: $color--gray-400;
-  $min-width: 300px; $max-width: 500px;
   $spacing: 1rem;
 
-  background-color: $background;
-  border: 0;
+  background-color: $white;
+  border: none;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   display: flex;
   flex-direction: column;
-  min-width: $min-width; max-width: $max-width;
+  max-width: 500px;
+  min-width: 300px;
 
-  /* Shape */
-  @include set-shape(Modal, rounded);
-  @include set-shape(Modal, soft);
-  @include set-shape(Modal, square);
+  // Shape
+  @include shape(Modal, rounded);
+  @include shape(Modal, soft);
+  @include shape(Modal, square);
 
   .Modal--header {
-    $font-size: 1.2rem;
-    $size: $font-size + ($spacing * 2);
-
-    border-bottom: 1px solid $divider;
+    border-bottom: 1px solid color($gray, 400);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     .Modal--title {
-      font-size: $font-size;
+      font-size: 1.2rem;
       font-weight: 600;
       line-height: 1;
       margin: $spacing;
@@ -38,9 +32,11 @@
   }
 
   .Modal--content {
+    font-size: 1rem;
+    line-height: 1.5;
     max-height: 50vh;
     overflow-y: scroll;
-    padding: #{$spacing};
+    padding: $spacing;
     & > * {
       &:first-child {
         margin-top: 0;

@@ -1,0 +1,7 @@
+@import './functions';
+
+@mixin shape($componentName, $shape) {
+  &.#{$componentName}--shape-#{$shape} {
+    border-radius: #{shape($shape)};
+  }
+}
