@@ -5,6 +5,7 @@
 ### Features
 
 - New components:
+  - `Card` - Contain content and actions about a single subject.
   - `Placeholder` - Can replace loading elements.
 
 ### Changes
