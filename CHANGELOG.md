@@ -14,7 +14,8 @@
 
 ### Other
 
-- Updated Storybook to `6.4.15`.
+- Updated Storybook to `6.4.19`.
+- `@storybook/addon-postcss` caused problems for every Storybook update and was thus removed entirely.
 
 ---
 
