@@ -1,6 +1,0 @@
-@mixin set-shape($componentName, $shape) {
-  $border-radius: map-get($theme--shape, $shape);
-  &.#{$componentName}--#{$shape} {
-    border-radius: $border-radius;
-  }
-}

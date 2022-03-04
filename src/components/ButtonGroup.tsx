@@ -14,11 +14,11 @@ export interface ButtonGroupProps {
 }
 
 /**
- * A container for grouping multiple buttons
+ * A container for grouping multiple buttons.
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.0
+ * @version 0.2.0
  * @since 0.0.1
- * @global
+ * @published
  */
 export function ButtonGroup({
   children,
@@ -29,7 +29,7 @@ export function ButtonGroup({
     <div
       className={[
         'ButtonGroup',
-        `ButtonGroup--${shape}`
+        `ButtonGroup--shape-${shape}`
       ].join(' ')}
       role="group"
       {...props}

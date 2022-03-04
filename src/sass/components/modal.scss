@@ -3,52 +3,20 @@
 @import '../abstract/mixins';
 
 .Modal {
-  $spacing: 1rem;
-
   background-color: $white;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  min-width: 300px;
+  width: clamp(300px, 60vw, 50ch);
 
   // Shape
-  @include shape(Modal, rounded);
-  @include shape(Modal, soft);
-  @include shape(Modal, square);
-
-  .Modal--header {
-    border-bottom: 1px solid color($gray, 400);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .Modal--title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      line-height: 1;
-      margin: $spacing;
-    }
-  }
-
-  .Modal--content {
-    font-size: 1rem;
-    line-height: 1.5;
-    max-height: 50vh;
-    overflow-y: scroll;
-    padding: $spacing;
-    & > * {
-      &:first-child {
-        margin-top: 0;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
+  @include shape("Modal", rounded);
+  @include shape("Modal", soft);
+  @include shape("Modal", square);
 }
 
-.Modal--backdrop {
+.Modal__backdrop {
   top: 0; left: 0; right: 0; bottom: 0;
   align-items: center;
   background-color: rgba($color: #000, $alpha: 0.5);
@@ -58,4 +26,34 @@
   overflow: hidden;
   position: fixed;
   z-index: 50;
+}
+
+.Modal__content {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-height: 50vh;
+  overflow-y: scroll;
+  padding: 1rem;
+  & > * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.Modal__header {
+  border-bottom: 1px solid color($gray, 400);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Modal__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  margin: 1rem;
 }

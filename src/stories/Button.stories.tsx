@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Button> = args => <Button {...args} />
 export const Default = Template.bind({})
 Default.args = {
   label: 'Click me',
-  mode: 'default',
+  mode: 'light',
   shape: 'soft',
   size: 'medium',
   outline: false,
@@ -28,7 +28,7 @@ export const Modes: ComponentStory<typeof Button> = args => (
       gap: '1rem'
     }}
   >
-    <Button {...args} mode="default" />
+    <Button {...args} mode="light" />
     <Button {...args} mode="primary" />
     <Button {...args} mode="success" />
     <Button {...args} mode="danger" />

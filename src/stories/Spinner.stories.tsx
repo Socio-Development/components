@@ -11,7 +11,7 @@ const Template: ComponentStory<typeof Spinner> = args => <Spinner {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  mode: 'default',
+  mode: 'dark',
   duration: 1
 }
 
@@ -23,12 +23,12 @@ export const Modes: ComponentStory<typeof Spinner> = args => (
       gap: '1rem'
     }}
   >
-    <Spinner {...args} mode="default" />
     <Spinner {...args} mode="primary" />
     <Spinner {...args} mode="success" />
     <Spinner {...args} mode="danger" />
     <Spinner {...args} mode="info" />
     <Spinner {...args} mode="dark" />
+    <Spinner {...args} mode="light" />
   </div>
 )
 Modes.args = {

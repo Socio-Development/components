@@ -1,75 +1,85 @@
-@import '../variables/colors';
-@import '../theme/index';
+@import '../abstract/variables';
+@import '../abstract/mixins';
 
-@mixin button-mode($mode) {
-  $target: map-get($theme--mode, $mode);
-  $mode-default: map-get($target, default);
-  $mode-hover: map-get($target, hover);
-  $mode-text: map-get($target, text);
-
-  &[class*="#{$mode}"] {
-    border-color: $mode-default;
-  }
-  &.Button--#{$mode},
-  &.Button--#{$mode}-outline:hover {
-    background-color: $mode-default;
-    color: $mode-text;
-  }
-  &.Button--#{$mode}:hover {
-    background-color: $mode-hover;
-    border-color: $mode-hover;
-  }
-  &.Button--#{$mode}-outline {
-    color: $mode-default;
-  }
+.Button--mode-danger {
+  --color: #{map-get($danger, 500)};
+  --hover: #{map-get($danger, 600)};
+  --text: #{$white};
 }
-
-@mixin button-shape($shape) {
-  &.Button--#{$shape} {
-    border-radius: map-get($theme--shape, $shape);
-  }
+.Button--mode-dark {
+  --color: #{$dark};
+  --hover: #{color($dark, 800)};
+  --text: #{$white};
+}
+.Button--mode-info {
+  --color: #{map-get($info, 500)};
+  --hover: #{map-get($info, 400)};
+  --text: #{$black};
+}
+.Button--mode-light {
+  --color: #{$light};
+  --hover: #{color($light, 600)};
+  --text: #{$black};
+}
+.Button--mode-primary {
+  --color: #{map-get($primary, 500)};
+  --hover: #{map-get($primary, 600)};
+  --text: #{$white};
+}
+.Button--mode-success {
+  --color: #{map-get($success, 500)};
+  --hover: #{map-get($success, 600)};
+  --text: #{$white};
 }
 
 .Button {
-  border: 1px solid transparent;
+  background-color: var(--color);
+  border: 1px solid var(--color);
+  color: var(--text);
   cursor: pointer;
   display: inline-block;
   font-weight: 700;
   line-height: 1;
+  transition: all .2s;
 
-  /* Disabled */
-  &.disabled {
+  &:hover {
+    background-color: var(--hover);
+    border-color: var(--hover);
+  }
+
+  // Disabled
+  &:disabled {
     opacity: .65;
     pointer-events: none;
   }
 
-  /* Mode */
+  // Outline
   &[class*="outline"] {
-    background-color: transparent
+    background-color: transparent;
+    color: var(--color);
+    &:hover {
+      background-color: var(--color);
+      border-color: var(--color);
+      color: var(--text);
+    }
   }
-  @include button-mode("danger");
-  @include button-mode("dark");
-  @include button-mode("default");
-  @include button-mode("info");
-  @include button-mode("primary");
-  @include button-mode("success");
 
-  /* Shape */
-  @include button-shape(pill);
-  @include button-shape(rounded);
-  @include button-shape(soft);
-  @include button-shape(square);
+  // Shape
+  @include shape("Button", pill);
+  @include shape("Button", rounded);
+  @include shape("Button", soft);
+  @include shape("Button", square);
 
-  /* Size */
-  &.Button--small {
+  // Size
+  &.Button--size-small {
     font-size: .75rem;
     padding: .625rem 1rem;
   }
-  &.Button--medium {
+  &.Button--size-medium {
     font-size: .875rem;
     padding: .6875rem 1.25rem;
   }
-  &.Button--large {
+  &.Button--size-large {
     font-size: 1rem;
     padding: .75rem 1.5rem;
   }

@@ -24,9 +24,9 @@ export interface ContactLinkProps {
 /**
  * Displays either a `mailto:`, or `tel:` link with corresponding icons
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.1
+ * @version 0.2.0
  * @since 0.1.0
- * @global
+ * @published
  */
 export function ContactLink({
   label,
@@ -74,7 +74,7 @@ export function ContactLink({
       { typeof label === 'number' ? (
         <>
         <PhoneIcon
-          className="ContactLink--icon"
+          className="ContactLink__icon"
           size={ size }
         />
         { separateDigits() }
@@ -82,7 +82,7 @@ export function ContactLink({
       ) : (
         <>
         <MailIcon
-          className="ContactLink--icon"
+          className="ContactLink__icon"
           size={ size }
         />
         { label }

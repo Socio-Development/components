@@ -1,18 +1,16 @@
-@import '../theme/shape';
+@import '../abstract/functions';
 
-@mixin button-group-shape($shape) {
-  $border-radius: map-get($theme--shape, $shape);
-
-  &.ButtonGroup--#{$shape} {
-    .Button:first-child {
-      border-bottom-left-radius: $border-radius;
-      border-top-left-radius: $border-radius;
-    }
-    .Button:last-child {
-      border-bottom-right-radius: $border-radius;
-      border-top-right-radius: $border-radius;
-    }
-  }
+.ButtonGroup--shape-pill {
+  --shape: #{shape(pill)};
+}
+.ButtonGroup--shape-rounded {
+  --shape: #{shape(rounded)};
+}
+.ButtonGroup--shape-soft {
+  --shape: #{shape(soft)};
+}
+.ButtonGroup--shape-square {
+  --shape: #{shape(square)};
 }
 
 .ButtonGroup {
@@ -21,11 +19,13 @@
 
   .Button {
     border-radius: 0;
+    &:first-child {
+      border-bottom-left-radius: var(--shape);
+      border-top-left-radius: var(--shape);
+    }
+    &:last-child {
+      border-bottom-right-radius: var(--shape);
+      border-top-right-radius: var(--shape);
+    }
   }
-
-  /* Shape */
-  @include button-group-shape(pill);
-  @include button-group-shape(rounded);
-  @include button-group-shape(soft);
-  @include button-group-shape(square);
 }

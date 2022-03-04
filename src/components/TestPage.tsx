@@ -7,7 +7,7 @@ export interface TestPageProps {
 /**
  * Page for testing component behaviour
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.1
+ * @version 0.2.0
  * @since 0.1.0
  */
 export function TestPage({
@@ -23,7 +23,7 @@ export function TestPage({
       }}
       {...props}
     >
-      <div className="TestPage--content">
+      <div className="TestPage__content">
         { children }
       </div>
     </div>

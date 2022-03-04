@@ -26,11 +26,11 @@ export interface PlaceholderProps {
 }
 
 /**
- * UI component for displaying loading data
+ * UI component for displaying loading data.
  * @author [CasperSocio](https://github.com/CasperSocio)
  * @version 0.2.0
  * @since 0.2.0
- * @global
+ * @published
  */
 export function Placeholder({
   animate = false,
@@ -45,7 +45,7 @@ export function Placeholder({
     <span
       className={[
         'Placeholder',
-        `Placeholder--${shape}`,
+        `Placeholder--shape-${shape}`,
         animate && 'Placeholder--animate'
       ].join(' ')}
       style={{

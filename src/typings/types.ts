@@ -1,8 +1,8 @@
 export type TMode =
   | 'danger'
   | 'dark'
-  | 'default'
   | 'info'
+  | 'light'
   | 'primary'
   | 'success'
 

@@ -22,11 +22,11 @@ export interface ModalProps {
 }
 
 /**
- * Primary UI component for pop-up notifications
+ * Primary UI component for pop-up notifications.
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.0
+ * @version 0.2.0
  * @since 0.1.0
- * @global
+ * @published
  */
 export function Modal({
   backdropClose = true,
@@ -43,21 +43,21 @@ export function Modal({
 
   return isActive ? (
     <div
-      className="Modal--backdrop"
+      className="Modal__backdrop"
       onClick={ backdropClose ? handleClose : undefined }
     >
       <div
         className={[
           'Modal',
-          `Modal--${shape}`,
+          `Modal--shape-${shape}`,
         ].join(' ')}
         {...props}
       >
-        <div className="Modal--header">
-          <h5 className="Modal--title">{ title }</h5>
+        <div className="Modal__header">
+          <h5 className="Modal__title">{ title }</h5>
           <ButtonClose onClick={ handleClose } />
         </div>
-        <div className="Modal--content">
+        <div className="Modal__content">
           { children }
         </div>
       </div>

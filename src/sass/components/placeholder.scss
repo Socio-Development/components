@@ -17,8 +17,8 @@
   }
 
   // Shape
-  @include shape(Placeholder, pill);
-  @include shape(Placeholder, rounded);
-  @include shape(Placeholder, soft);
-  @include shape(Placeholder, square);
+  @include shape("Placeholder", pill);
+  @include shape("Placeholder", rounded);
+  @include shape("Placeholder", soft);
+  @include shape("Placeholder", square);
 }

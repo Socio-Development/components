@@ -30,15 +30,15 @@ export interface AlertProps {
 /**
  * Primary UI component for user notification
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.1
+ * @version 0.2.0
  * @since 0.0.1
- * @global
+ * @published
  */
 export function Alert({
   dismissable,
   exitAnimation = 'fade',
   label,
-  mode = 'default',
+  mode = 'light',
   shape = 'soft',
   ...props
 }: AlertProps) {
@@ -51,7 +51,7 @@ export function Alert({
   }
   const closeButton = (
     <button
-      className="Alert--close"
+      className="Alert__close"
       type="button"
       aria-label="Close"
       title="Close"
@@ -63,15 +63,15 @@ export function Alert({
     <div
       className={[
         'Alert',
-        `Alert--${mode}`,
-        `Alert--${shape}`,
+        `Alert--mode-${mode}`,
+        `Alert--shape-${shape}`,
         dismissable && 'Alert--dismissable',
         isHidden && `Alert--exit Alert--exit-${exitAnimation}`
       ].join(' ')}
       role="alert"
       {...props}
     >
-      <span className="Alert--text">{ label }</span>
+      <span className="Alert__text">{ label }</span>
       { dismissable && <ButtonClose onClick={ closeAlert } /> }
     </div>
   )

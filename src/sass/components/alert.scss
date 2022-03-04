@@ -1,27 +1,30 @@
-@import '../variables/colors';
-@import '../theme/mode';
-@import '../theme/shape';
+@import '../abstract/variables';
+@import '../abstract/functions';
+@import '../abstract/mixins';
 
-@mixin alert-mode($mode) {
-  $theme: map-get($theme--mode, $mode);
-  $mode-bg: map-get($theme, bg-light);
-  $mode-border: map-get($theme, border-light);
-  $mode-color: map-get($theme, text-blend);
-
-  &.Alert--#{$mode} {
-    background-color: $mode-bg;
-    border-color: $mode-border;
-    color: $mode-color;
-  }
+.Alert--mode-danger {
+  --background: #{map-get($danger, 50)};
+  --color: #{map-get($danger, 500)};
 }
-
-@mixin alert-shape($shape) {
-  &.Alert--#{$shape} {
-    border-radius: map-get($theme--shape, $shape);
-    @if $shape == pill {
-      scrollbar-color: var($color--gray-500) transparent;
-    }
-  }
+.Alert--mode-dark {
+  --background: #{$dark};
+  --color: #{$white};
+}
+.Alert--mode-info {
+  --background: #{map-get($info, 50)};
+  --color: #{map-get($info, 600)};
+}
+.Alert--mode-light {
+  --background: #{$light};
+  --color: #{$dark};
+}
+.Alert--mode-primary {
+  --background: #{map-get($primary, 100)};
+  --color: #{map-get($primary, 600)};
+}
+.Alert--mode-success {
+  --background: #{map-get($success, 100)};
+  --color: #{map-get($success, 600)};
 }
 
 .Alert {
@@ -29,14 +32,16 @@
   $spacing-y: .75rem;
   $text-size: 1rem;
 
-  border: 1px solid transparent;
+  background-color: var(--background);
+  border: 1px solid var(--color);
+  color: var(--color);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1rem;
   min-height: 3rem;
 
-  .Alert--text {
+  .Alert__text {
     align-items: center;
     display: flex;
     font-size: $text-size;
@@ -46,12 +51,12 @@
   }
 
   &.Alert--dismissable {
-    .Alert--text {
+    .Alert__text {
       margin-right: 0;
     }
   }
 
-  /* Exit animation */
+  // Exit animation
   &.Alert--exit {
     opacity: 0;
     transition: 1s;
@@ -70,26 +75,18 @@
     }
   }
 
-  /* Mode */
-  @include alert-mode(danger);
-  @include alert-mode(dark);
-  @include alert-mode(default);
-  @include alert-mode(info);
-  @include alert-mode(primary);
-  @include alert-mode(success);
-
-  /* Shape */
-  &.Alert--pill {
+  // Shape
+  &.Alert--shape-pill {
     height: $text-size + ($spacing-y * 2);
-    scrollbar-color: $color--gray-500 transparent;
-    .Alert--text {
+    scrollbar-color: $gray transparent;
+    .Alert__text {
       line-height: 1;
       overflow-x: scroll;
       white-space: nowrap;
     }
   }
-  @include alert-shape(pill);
-  @include alert-shape(rounded);
-  @include alert-shape(soft);
-  @include alert-shape(square);
+  @include shape("Alert", pill);
+  @include shape("Alert", rounded);
+  @include shape("Alert", soft);
+  @include shape("Alert", square);
 }

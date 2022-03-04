@@ -36,14 +36,14 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.0
+ * @version 0.2.0
  * @since 0.0.1
- * @global
+ * @published
  */
 export function Button({
-  disabled,
+  disabled = false,
   label,
-  mode = 'default',
+  mode = 'light',
   outline,
   shape = 'soft',
   size = 'medium',
@@ -54,11 +54,12 @@ export function Button({
     <button
       className={[
         'Button',
-        outline ? `Button--${mode}-outline` : `Button--${mode}`,
-        `Button--${shape}`,
-        `Button--${size}`,
-        disabled && 'disabled',
+        `Button--mode-${mode}`,
+        `Button--shape-${shape}`,
+        `Button--size-${size}`,
+        outline && 'Button--outline',
       ].join(' ')}
+      disabled={disabled}
       {...props}
     >
       { label }

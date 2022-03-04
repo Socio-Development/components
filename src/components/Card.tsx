@@ -12,10 +12,7 @@ interface CardProps {
 
 /**
  * Cards contain content and actions about a single subject.
- * 
  * @version 0.2.0
- * @param {CardProps} props The component props
- * @returns {JSX.Element} The Card component
  * @since 0.2.0
  */
 export function Card({

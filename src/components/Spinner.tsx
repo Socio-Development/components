@@ -16,20 +16,20 @@ export interface SpinnerProps {
 /**
  * UI component to visualize loading content
  * @author [CasperSocio](https://github.com/CasperSocio)
- * @version 0.1.0
+ * @version 0.2.0
  * @since 0.0.1
- * @global
+ * @published
  */
 export function Spinner({
   duration = 1,
-  mode = 'default',
+  mode = 'dark',
   ...props
 }: SpinnerProps) {
   return (
     <div
       className={[
         'Spinner',
-        `Spinner--${mode}`
+        `Spinner--mode-${mode}`
       ].join(' ')}
       role="status"
       style={{

@@ -12,14 +12,14 @@ const Template: ComponentStory<typeof Alert> = args => <Alert {...args} />
 export const Default = Template.bind({})
 Default.args = {
   label: 'This is an alert',
-  mode: 'default',
+  mode: 'light',
   shape: 'soft',
   dismissable: false,
   exitAnimation: 'fade'
 }
 
 export const Modes: ComponentStory<typeof Alert> = args => (<>
-  <Alert {...args} mode="default" label={ `Default: ${args.label}` } />
+  <Alert {...args} mode="light" label={ `Light: ${args.label}` } />
   <Alert {...args} mode="primary" label={ `Primary: ${args.label}` } />
   <Alert {...args} mode="success" label={ `Success: ${args.label}` } />
   <Alert {...args} mode="danger" label={ `Danger: ${args.label}` } />

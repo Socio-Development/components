@@ -4,12 +4,14 @@
 
 ### Features
 
+- Added a style-guide to the [README](https://github.com/Socio-Development/components/blob/main/README.md).
 - New components:
   - `Card` - Contain content and actions about a single subject.
   - `Placeholder` - Can replace loading elements.
 
 ### Changes
 
+- All components were re-written to comply with BEM-syntax and the new style-guide.
 - Moved `src/styles/css/` to `src/assets/css/`.
 - Moved `src/styles/sass/` to `src/sass/`.
 
