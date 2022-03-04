@@ -30,7 +30,7 @@ Component names are capitalized.
 <Component />
 ```
 
-Subcomponents are objects within the component.
+Sub-components are objects within the main component.
 
 ```javascript
 <Component>
@@ -38,7 +38,7 @@ Subcomponents are objects within the component.
 </Component>
 ```
 
-Every component has their name as the main class identifier.
+Components must have their name as the root class.
 
 ```javascript
 export function Component() {
@@ -48,7 +48,7 @@ export function Component() {
 }
 ```
 
-Nested component elements should have a class name written in BEM-syntax.
+Nested component elements should have a class name written as `Component__element`.
 
 ```typescript
 export function Component({
@@ -64,7 +64,9 @@ export function Component({
 }
 ```
 
-If the component takes elements as props, these elements should be inside a container with the `Component__content` class.
+> Notice above how the listed props are alphabetized.
+
+If the component takes elements as props, these elements must be inside a container with the `Component__content` class.
 
 ```typescript
 export function Component({
@@ -82,4 +84,23 @@ export function Component({
 
 ### Modifiers and props
 
-The two most common modifiers for this library is `mode` (primary, success, danger) and `shape` (the component roundness). 
+The two most common modifiers for this library is `mode` (primary, success, danger) and `shape` (the component roundness). When applying modifications to a component, use classes written as `Component--mod-value`.
+
+```typescript
+export function Component({
+  mode = 'primary',
+  shape = 'soft'
+}: ComponentProps) {
+  return (
+    <div
+      className={[
+        'Component',
+        `Component--mode-${mode}`,
+        `Component--shape-${shape}`
+      ].join(' ')}
+    />
+  )
+}
+```
+
+> Notice the use of `Array.join()` which helps keep our code structured and nice looking.
