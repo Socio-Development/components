@@ -1,5 +1,9 @@
 # Socio Component Library
 
+## Deprecated
+
+Development of this project has been discontinued.
+
 **Install**
 
 ```bash
